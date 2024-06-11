@@ -6,6 +6,10 @@ import FormComponent from "./components/FormComponent.jsx";
 import HoverComponent from "./components/HoverComponent.jsx";
 import UpdateEffectComponent from "./components/UpdateEffectComponent.jsx";
 import ClickOutSideComponent from "./components/ClickOutSideComponent.jsx";
+import DebounceComponent from "./components/DebounceComponent.jsx";
+import ScriptComponent from "./components/ScriptComponent.jsx";
+import StorageComponent from "./components/StorageComponent.jsx";
+import WindowSizeComponent from "./components/WindowSizeComponent.jsx";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
       <HoverComponent />
       <UpdateEffectComponent />
       <ClickOutSideComponent />
+      <DebounceComponent />
+      <ScriptComponent />
+      <StorageComponent />
+      <WindowSizeComponent />
     </div>
   );
 }
