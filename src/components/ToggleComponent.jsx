@@ -1,5 +1,7 @@
 import React from "react";
 import { useToggle } from "react-super-hooks";
+import bulbOn from "../assets/images/bulb_on.gif";
+import bulbOff from "../assets/images/bulb_off.gif";
 
 export default function ToggleComponent() {
     const [bulbSwitch, toggleBulbSwitch] = useToggle(false);
@@ -9,7 +11,7 @@ export default function ToggleComponent() {
             <h3><span>useToggle</span> hook</h3>
             <div>
                 <img
-                    src={require(`../assets/images/bulb_${bulbSwitch ? "on" : "off"}.gif`)}
+                    src={bulbSwitch ? bulbOn : bulbOff}
                     alt={`bulb ${bulbSwitch ? "on" : "off"}`}
                     title={`Turn ${bulbSwitch ? "OFF" : "ON"}`}
                     onClick={toggleBulbSwitch}
