@@ -3,6 +3,7 @@ import { useUpdateEffect } from "react-super-hooks";
 
 const UpdateEffectComponent = () => {
     const [count, setCount] = useState(0);
+
     useUpdateEffect(() => {
         console.log("Alert: ", count);
     }, [count]);

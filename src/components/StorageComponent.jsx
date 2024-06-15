@@ -2,8 +2,8 @@ import React from "react";
 import { useSessionStorage, useLocalStorage } from "react-super-hooks";
 
 const StorageComponent = () => {
-    const [name, setName, removeName] = useSessionStorage('name', '');
-    const [favoriteColor, setFavoriteColor, removeFavoriteColor] = useLocalStorage('favoriteColor', '');
+    const [name, setName, removeName] = useLocalStorage('name', '');
+    const [favoriteColor, setFavoriteColor, removeFavoriteColor] = useSessionStorage('favoriteColor', '');
 
     const handleNameChange = (event) => {
         setName(event.target.value);
