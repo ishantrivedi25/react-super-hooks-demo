@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { useScript } from "react-super-hooks";
 
-const items = ['React', 'Angular', 'Vue', 'Svelte', 'Ember'];
+const items = [
+    { name: 'Vue', color: '#41B883' },
+    { name: 'Svelte', color: '#FF3E00' },
+    { name: 'Ember', color: '#E04E39' },
+    { name: 'React', color: '#61DAFB' },
+    { name: 'Angular', color: '#DD0031' }
+];
 
 const ScriptComponent = () => {
     const { loading, error } = useScript(
@@ -24,9 +30,9 @@ const ScriptComponent = () => {
             <h3><span>useScript</span> hook</h3>
             <div>
                 <h2>Shuffled Items</h2>
-                <ul>
-                    {shuffledArray.map((item, index) => (
-                        <li key={index}>{item}</li>
+                <ul className="wrapper__section">
+                    {shuffledArray.map(({ name, color }, index) => (
+                        <li key={index} style={{ color }}>{name}</li>
                     ))}
                 </ul>
                 <button onClick={shuffleItems}>Shuffle</button>

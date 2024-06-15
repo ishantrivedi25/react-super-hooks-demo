@@ -22,3 +22,7 @@ h3 span {
   width: 50px;
 }
 
+.wrapper__section {
+  padding: 0;
+  list-style: none;
+}
